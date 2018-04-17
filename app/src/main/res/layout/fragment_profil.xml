@@ -1,0 +1,187 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ca.ProfilFragment"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textView_FirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="14dp"
+        android:text="Prénom"
+        app:layout_constraintBottom_toTopOf="@+id/EditText_FirstName"
+        app:layout_constraintStart_toStartOf="@+id/EditText_FirstName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/EditText_FirstName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="225dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="47dp"
+        android:text="Martin"
+        app:layout_constraintBottom_toTopOf="@+id/textView_Sexe3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_LastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="1dp"
+        android:text="Nom"
+        app:layout_constraintBottom_toTopOf="@+id/EditText_LastName"
+        app:layout_constraintStart_toStartOf="@+id/EditText_LastName"
+        app:layout_constraintTop_toBottomOf="@+id/EditText_FirstName" />
+
+    <EditText
+        android:id="@+id/EditText_LastName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginStart="64dp"
+        android:text="Pellemoine"
+        app:layout_constraintBottom_toTopOf="@+id/textView_BirthDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_LastName" />
+
+    <TextView
+        android:id="@+id/textView_BirthDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:layout_marginStart="1dp"
+        android:text="Date de naissance"
+        app:layout_constraintBottom_toTopOf="@+id/EditText_BirthDate"
+        app:layout_constraintStart_toStartOf="@+id/EditText_LastName"
+        app:layout_constraintTop_toBottomOf="@+id/EditText_LastName" />
+
+    <EditText
+        android:id="@+id/EditText_BirthDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginStart="64dp"
+        android:text="28 / 11 / 1993"
+        app:layout_constraintBottom_toTopOf="@+id/textView_Sexe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_BirthDate" />
+
+    <TextView
+        android:id="@+id/textView_Sexe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:layout_marginStart="2dp"
+        android:text="Sexe"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/EditText_BirthDate" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="70dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="63dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView_Sexe3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Sexe">
+
+        <RadioButton
+            android:id="@+id/radioButtonM"
+            android:layout_width="63dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="M"
+            tools:layout_editor_absoluteX="107dp"
+            tools:layout_editor_absoluteY="431dp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonF"
+            android:layout_width="64dp"
+            android:layout_height="4dp"
+            android:layout_weight="1"
+            android:text="F"
+            tools:layout_editor_absoluteX="107dp"
+            tools:layout_editor_absoluteY="431dp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAutre"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:text="Autre"
+            tools:layout_editor_absoluteX="107dp"
+            tools:layout_editor_absoluteY="431dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView_Sexe3"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        android:layout_marginEnd="63dp"
+        android:layout_weight="1"
+        android:text="Département"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/EditText_FirstName" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="55dp"
+        android:entries="@array/department_arrays"
+        android:prompt="@string/department_prompt"
+        app:layout_constraintBottom_toTopOf="@+id/button_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Sexe3" />
+
+    <Button
+        android:id="@+id/button_submit"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="70dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Soumettre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintStart_toEndOf="@+id/textView_BirthDate"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" /><![CDATA[
+
+    />
+
+]]>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_fragment_internet"
+            android:icon="@drawable/ic_wifi"
+            android:title="Statut Internet" />
+        <item
+            android:id="@+id/nav_fragment_about"
+            android:icon="@drawable/ic_about"
+            android:title="A propos" />
+    </group>
+
+    <item android:title="Gestion Utilisateur">
+        <menu>
+            <item
+                android:id="@+id/nav_fragment_profil"
+                android:icon="@drawable/ic_pen"
+                android:title="Formulaire" />
+            <item
+                android:id="@+id/nav_fragment_displayrofil"
+                android:icon="@drawable/ic_profile"
+                android:title="Mon Profil" />
+        </menu>
+    </item>
+
+</menu>
